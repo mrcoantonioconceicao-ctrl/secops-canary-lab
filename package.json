@@ -4,5 +4,9 @@
   "private": true,
   "scripts": {
     "test": "echo 'canary ok'"
+  },
+  "dependencies": {
+    "lodash": "4.17.15",
+    "express": "4.16.0"
   }
 }
