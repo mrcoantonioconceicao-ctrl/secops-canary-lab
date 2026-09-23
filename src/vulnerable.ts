@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 
-const INTERNAL_JWT_SECRET = "super-secret-jwt-key-do-not-expose-12345";
+const INTERNAL_JWT_SECRET = process.env.JWT_SECRET || "fallback-secret-for-development"; // Carregue esta chave JWT de uma variável de ambiente. NUNCA a codifique diretamente no código. Garanta que um valor seguro seja fornecido no ambiente de produção e que o fallback seja apenas para desenvolvimento/testes locais.
 
 export function runUserQuery(userInput: string, cb: (err: any, stdout: string) => void) {
   // Vulnerabilidade clássica de command injection / uso de segredo hardcoded
