@@ -1,15 +1,3 @@
-pub struct Wallet {
-    pub balance: u64,
-}
-
-impl Wallet {
-    // [SecOps Guard] Checked Signer & Authority Validation
-    pub fn withdraw(&mut self, amount: u64) -> Result<(), &'static str> {
-        // Vulnerabilidade de subtração sem verificação
-                if amount > self.balance {
-            return Err("Insufficient funds");
-        }
-        self.balance = self.balance - amount;
-        Ok(())
-    }
+pub fn compute_exposure(val1: u64, val2: u64) -> u64 {
+    val1.wrapping_sub(val2)
 }
