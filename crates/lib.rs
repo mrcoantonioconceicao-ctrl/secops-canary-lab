@@ -1,3 +1,11 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left.checked_add(right).expect("Integer overflow in addition calculation")
+pub struct Wallet {
+    pub balance: u64,
+}
+
+impl Wallet {
+    pub fn withdraw(&mut self, amount: u64) -> Result<(), &'static str> {
+        // Vulnerabilidade de subtração sem verificação
+        self.balance = self.balance - amount;
+        Ok(())
+    }
 }
