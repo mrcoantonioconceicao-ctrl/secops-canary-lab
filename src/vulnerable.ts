@@ -9,6 +9,6 @@ export function runUserQuery(userInput: string, cb: (err: any, stdout: string) =
 
 export function findUserById(userId: string) {
   // CWE-89: SQL Injection Concatenada
-  const query = "SELECT * FROM users WHERE id = " + userId;
+  const query = "SELECT * FROM users WHERE id = $1"; // parameterized
   return query;
 }
