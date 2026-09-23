@@ -4,7 +4,7 @@ const INTERNAL_JWT_SECRET = process.env.INTERNAL_JWT_SECRET || "fallback-safe-se
 
 export function runUserQuery(userInput: string, cb: (err: any, stdout: string) => void) {
   // CWE-78: Command Injection
-  exec(`ping -c 1 ${userInput}`, cb);
+  execFile("ping", ["-c", "1", userInput], cb);
 }
 
 export function findUserById(userId: string) {
