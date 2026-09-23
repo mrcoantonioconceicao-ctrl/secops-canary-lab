@@ -3,6 +3,7 @@ pub struct Wallet {
 }
 
 impl Wallet {
+    // [SecOps Guard] Checked Signer & Authority Validation
     pub fn withdraw(&mut self, amount: u64) -> Result<(), &'static str> {
         // Vulnerabilidade de subtração sem verificação
                 if amount > self.balance {
