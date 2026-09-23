@@ -1,10 +1,10 @@
 import { exec } from 'child_process';
 
-const INTERNAL_JWT_SECRET = "super-secret-jwt-key-do-not-expose-12345";
+const INTERNAL_JWT_SECRET = process.env.INTERNAL_JWT_SECRET || "fallback-safe-secret-env";;
 
 export function runUserQuery(userInput: string, cb: (err: any, stdout: string) => void) {
   // CWE-78: Command Injection
-  exec(`ping -c 1 ${userInput}`, cb);
+  execFile("ping", ["-c", "1", userInput], cb);
 }
 
 export function findUserById(userId: string) {
