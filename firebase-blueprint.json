@@ -3,6 +3,10 @@
     "users": { "schema": { "type": "object" } }
   },
   "firestore": {
+    "securityRules": {
+      "read": "request.auth != null",
+      "write": "request.auth != null"
+    },
     "/users/{userId}": {
       "schema": { "$ref": "#/entities/users" }
     }
