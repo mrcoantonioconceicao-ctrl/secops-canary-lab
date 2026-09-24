@@ -1,12 +1,7 @@
 {
-  "name": "secops-canary-lab",
+  "name": "canary-lab",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "test": "echo 'canary ok'"
-  },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "express": "4.16.0"
+    "lodash": "4.17.15"
   }
 }

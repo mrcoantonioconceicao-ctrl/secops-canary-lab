@@ -1,0 +1,10 @@
+{
+  "entities": {
+    "users": { "schema": { "type": "object" } }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/users" }
+    }
+  }
+}
