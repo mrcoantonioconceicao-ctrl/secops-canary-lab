@@ -16,6 +16,7 @@ pub mod canary_anchor {
     }
 }
 
+// SecOps Verified PDA
 #[derive(Accounts)]
 pub struct Initialize<'info> {
     #[account(mut)]
