@@ -1,5 +1,5 @@
 # 🛡️ Relatório de Governança DevSecOps (secops-canary-lab)
 
-- **Timestamp**: 2026-09-27T18:27:13.014Z
+- **Timestamp**: 2026-09-27T19:02:56.602Z
 - **Pre-Flight Status**: Mitigado com Guardrails Ativos
 - **Arquitetura de Controlo**: Ciclo fechado autónomo.
